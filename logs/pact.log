@@ -1,0 +1,74 @@
+I, [2021-12-16T10:35:03.276059 #15332]  INFO -- : Registered expected interaction GET /characters
+I, [2021-12-16T10:35:03.278025 #15332]  INFO -- : Received request GET /characters
+D, [2021-12-16T10:35:03.279024 #15332] DEBUG -- : {
+  "description": "a request to list all characters",
+  "request": {
+    "method": "GET",
+    "path": "/characters"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 1
+        },
+        "name": {
+          "json_class": "Pact::SomethingLike",
+          "contents": "Walter White"
+        },
+        "age": {
+          "json_class": "Pact::SomethingLike",
+          "contents": 58
+        }
+      },
+      "min": 5
+    }
+  },
+  "metadata": null
+}
+D, [2021-12-16T10:35:03.279024 #15332] DEBUG -- : {
+  "path": "/characters",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "axios/0.24.0",
+    "Host": "localhost:3377",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-12-16T10:35:03.283025 #15332]  INFO -- : Found matching response for GET /characters
+D, [2021-12-16T10:35:03.284027 #15332] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Walter White"
+      },
+      "age": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 58
+      }
+    },
+    "min": 5
+  }
+}
+I, [2021-12-16T10:35:03.308059 #15332]  INFO -- : Verifying - interactions matched
+I, [2021-12-16T10:35:03.324025 #15332]  INFO -- : Cleared interactions
+I, [2021-12-16T10:35:03.340028 #15332]  INFO -- : Writing pact for characters-api-application to C:/projetos/testes-de-contrato/pacts/web-application-characters-api-application.json
